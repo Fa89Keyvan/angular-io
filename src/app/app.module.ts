@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { ProductListComponent } from './product-list/product-list.component';
 import { OfferComponent } from './offer/offer.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +16,16 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ToolbarComponent,
     ProductListComponent,
     OfferComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       { path:"", component: AppComponent },
       { path:"productList", component:ProductListComponent},
-      { path: "productDetail/:productID", component: ProductDetailComponent}
+      { path: "productDetail/:productID", component: ProductDetailComponent},
+      { path: "cart", component: CartComponent }
     ])
   ],
   providers: [],
