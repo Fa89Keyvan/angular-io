@@ -1,10 +1,11 @@
-
 <div *ngFor="let item of products">
-    <h3>{{ item.name }}</h3>
-    <p>
-        {{ item.description }}
-    </p>
-    <button (click)="share(item.name)" >Share</button>
-    <span class="spacer"></span>
-    <app-offer [product]="item" (onShowOffer)="showOffer(item)"></app-offer>
+    <a [title]="item.name + 'details'" [routerLink]="['/productDetail', item.productID]">
+        <h3>{{ item.name }}</h3>
+    </a>
+  <p>
+    {{ item.description }}
+  </p>
+  <button (click)="share(item.name)">Share</button>
+  <span class="spacer"></span>
+  <app-offer [product]="item" (onShowOffer)="showOffer(item)"></app-offer>
 </div>

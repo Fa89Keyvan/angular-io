@@ -7,19 +7,22 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { RouterModule } from '@angular/router';
 import { ProductListComponent } from './product-list/product-list.component';
 import { OfferComponent } from './offer/offer.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     ProductListComponent,
-    OfferComponent
+    OfferComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       { path:"", component: AppComponent },
-      { path:"productList", component:ProductListComponent}
+      { path:"productList", component:ProductListComponent},
+      { path: "productDetail/:productID", component: ProductDetailComponent}
     ])
   ],
   providers: [],
