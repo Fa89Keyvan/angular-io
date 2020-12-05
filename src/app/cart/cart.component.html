@@ -5,3 +5,20 @@
 </ul>
 
 <a [routerLink]="['/shipping']">Shipping</a>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="name">
+          Name
+        </label>
+        <input id="name" type="text" formControlName="name">
+      </div>
+    
+      <div>
+        <label for="address">
+          Address
+        </label>
+        <input id="address" type="text" formControlName="address">
+      </div>
+    <button type="submit" class="button">Purchase</button>
+</form>
