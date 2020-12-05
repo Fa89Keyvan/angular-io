@@ -1,0 +1,7 @@
+
+<div *ngIf="model">
+    <div *ngFor="let item of model | async">
+        <h3>{{item.type}}</h3>
+        <h5>{{item.price}}</h5>
+    </div>
+</div>
