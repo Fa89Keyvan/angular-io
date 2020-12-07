@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CartService } from '../cart.service';
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { JsonPipe } from '@angular/common';

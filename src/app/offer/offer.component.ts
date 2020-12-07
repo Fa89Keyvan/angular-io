@@ -7,7 +7,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class OfferComponent {
 
-  @Input() product:any;
+
+  @Input()
+    get product(): any { return this._product; }
+    set product(prod: any) { this._product = prod; }
+  _product:any;
+
   @Output() onShowOffer = new EventEmitter();
 
   constructor() { }
