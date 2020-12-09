@@ -12,6 +12,8 @@ import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { VoteTakerComponent } from './vote-taker/vote-taker.component';
+import { VoterComponent } from './voter/voter.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     OfferComponent,
     ProductDetailComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    VoteTakerComponent,
+    VoterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,8 @@ import { ReactiveFormsModule } from '@angular/forms';
       { path:"productList", component:ProductListComponent},
       { path: "productDetail/:productID", component: ProductDetailComponent},
       { path: "cart", component: CartComponent },
-      { path: "shipping", component: ShippingComponent }
+      { path: "shipping", component: ShippingComponent },
+      { path: "voteTaker", component: VoteTakerComponent }
     ])
   ],
   providers: [],
