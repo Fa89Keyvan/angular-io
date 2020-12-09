@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class VoteTakerComponent implements OnInit {
 
   votersNames = ["BMW", "BENZ", "AUDI"];
+  singleVoterName = "Nissan";
+
 
   agreeCount: number = 0;
   disagreeCount: number = 0;
@@ -21,5 +23,7 @@ export class VoteTakerComponent implements OnInit {
     agreed ? this.agreeCount ++ : this.disagreeCount ++;
   }
 
-
+  changeSingleVoterName(){
+    this.singleVoterName = "Toyota";
+  }
 }

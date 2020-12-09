@@ -6,3 +6,9 @@
     <app-voter *ngFor="let name of votersNames" (onVoted)="countVotes($event)">
     </app-voter>
 </p>
+
+<button (click)="changeSingleVoterName()">Change Single Voter name</button>
+<p>
+    <app-voter [name]="singleVoterName"></app-voter>
+</p>
+

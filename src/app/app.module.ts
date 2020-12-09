@@ -14,6 +14,8 @@ import { ShippingComponent } from './shipping/shipping.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { VoteTakerComponent } from './vote-taker/vote-taker.component';
 import { VoterComponent } from './voter/voter.component';
+import { VersionChildComponent } from './version-child/version-child.component';
+import { VersionParentComponent } from './version-parent/version-parent.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { VoterComponent } from './voter/voter.component';
     CartComponent,
     ShippingComponent,
     VoteTakerComponent,
-    VoterComponent
+    VoterComponent,
+    VersionChildComponent,
+    VersionParentComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,8 @@ import { VoterComponent } from './voter/voter.component';
       { path: "productDetail/:productID", component: ProductDetailComponent},
       { path: "cart", component: CartComponent },
       { path: "shipping", component: ShippingComponent },
-      { path: "voteTaker", component: VoteTakerComponent }
+      { path: "voteTaker", component: VoteTakerComponent },
+      { path: "onChanges", component: VersionParentComponent }
     ])
   ],
   providers: [],

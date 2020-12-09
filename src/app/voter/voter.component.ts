@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-voter',
   templateUrl: './voter.component.html',
   styleUrls: ['./voter.component.css']
 })
-export class VoterComponent implements OnInit {
+export class VoterComponent implements OnChanges {
 
   voted:boolean = false;
   
@@ -17,12 +17,18 @@ export class VoterComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
 
   vote(agreed: boolean){
     this.voted = true;
     this.onVoted.emit(agreed);
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    
+    console.log(changes);
+    
   }
 
 }
