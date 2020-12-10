@@ -18,6 +18,8 @@ import { VersionChildComponent } from './version-child/version-child.component';
 import { VersionParentComponent } from './version-parent/version-parent.component';
 import { CountDownTimerComponent } from './count-down-timer/count-down-timer.component';
 import { OtpComponent } from './otp/otp.component';
+import { BordComponent } from './observable/bord/bord.component';
+import { TaskFormComponent } from './observable/task-form/task-form.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { OtpComponent } from './otp/otp.component';
     VersionChildComponent,
     VersionParentComponent,
     CountDownTimerComponent,
-    OtpComponent
+    OtpComponent,
+    BordComponent,
+    TaskFormComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,8 @@ import { OtpComponent } from './otp/otp.component';
       { path: "shipping", component: ShippingComponent },
       { path: "voteTaker", component: VoteTakerComponent },
       { path: "onChanges", component: VersionParentComponent },
-      { path: "localVariable", component: OtpComponent }
+      { path: "localVariable", component: OtpComponent },
+      { path: "taskBoard", component: BordComponent}
     ])
   ],
   providers: [],
