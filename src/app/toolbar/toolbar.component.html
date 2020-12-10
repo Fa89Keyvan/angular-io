@@ -9,15 +9,20 @@
     <a [routerLink]="['/productList']">Product list</a>
   </span>
 
-  <a id="cart" [routerLink]="['/cart']">
-    <span>Cart</span>
+  <span class="toolbar-item">
+    <a [routerLink]="['/cart']">Cart</a>
     <b>(1)</b>
-  </a>
+  </span>
   
-  <a id="voteTaker" [routerLink]="['/voteTaker']">
-    <span> Vote taker </span>
-  </a>
-  <a id="onChanges" [routerLink]="['/onChanges']">
-    <span> OnChanges </span>
-  </a>
+  <span class="toolbar-item">
+    <a [routerLink]="['/voteTaker']"> Vote taker </a>
+  </span>
+
+  <span class="toolbar-item">
+    <a [routerLink]="['/onChanges']"> OnChanges </a>
+  </span>
+
+  <span class="toolbar-item">
+    <a [routerLink]="['/localVariable']">Local variable</a>
+  </span>
 </div>

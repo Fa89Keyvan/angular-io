@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -16,6 +16,8 @@ import { VoteTakerComponent } from './vote-taker/vote-taker.component';
 import { VoterComponent } from './voter/voter.component';
 import { VersionChildComponent } from './version-child/version-child.component';
 import { VersionParentComponent } from './version-parent/version-parent.component';
+import { CountDownTimerComponent } from './count-down-timer/count-down-timer.component';
+import { OtpComponent } from './otp/otp.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { VersionParentComponent } from './version-parent/version-parent.componen
     VoteTakerComponent,
     VoterComponent,
     VersionChildComponent,
-    VersionParentComponent
+    VersionParentComponent,
+    CountDownTimerComponent,
+    OtpComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,8 @@ import { VersionParentComponent } from './version-parent/version-parent.componen
       { path: "cart", component: CartComponent },
       { path: "shipping", component: ShippingComponent },
       { path: "voteTaker", component: VoteTakerComponent },
-      { path: "onChanges", component: VersionParentComponent }
+      { path: "onChanges", component: VersionParentComponent },
+      { path: "localVariable", component: OtpComponent }
     ])
   ],
   providers: [],
