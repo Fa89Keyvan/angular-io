@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { CountDownTimerComponent } from '../count-down-timer/count-down-timer.component';
 
 @Component({
   selector: 'app-otp',
@@ -11,11 +12,18 @@ import { Component, OnInit } from '@angular/core';
     `,
   styleUrls: ['./otp.component.css']
 })
-export class OtpComponent implements OnInit {
+export class OtpComponent implements AfterViewInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  @ViewChild(CountDownTimerComponent)
+  private timer: CountDownTimerComponent;
+
+  
+  ngAfterViewInit(): void {
+  
+    this.timer.start();
+    
   }
 
 }
