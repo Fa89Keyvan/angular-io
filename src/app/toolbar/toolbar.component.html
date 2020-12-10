@@ -11,7 +11,7 @@
 
   <span class="toolbar-item">
     <a [routerLink]="['/cart']">Cart</a>
-    <b>(1)</b>
+    <b>({{_cartService.orderItems.length}})</b>
   </span>
   
   <span class="toolbar-item">

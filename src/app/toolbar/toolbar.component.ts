@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+
+  _cartService: CartService;
+
+  constructor(private cartService: CartService) {
+    this._cartService = cartService;
+  }
 
   ngOnInit(): void {
   }
