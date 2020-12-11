@@ -20,6 +20,10 @@ import { CountDownTimerComponent } from './count-down-timer/count-down-timer.com
 import { OtpComponent } from './otp/otp.component';
 import { BordComponent } from './observable/bord/bord.component';
 import { TaskFormComponent } from './observable/task-form/task-form.component';
+import { PartyFormComponent } from './party/party-form/party-form.component';
+import { PartyFormTemplateDirective } from './party/party-form-template.directive';
+import { NatualPartyFormComponent } from './party/natual-party-form/natual-party-form.component';
+import { LegalPartyFormComponent } from './party/legal-party-form/legal-party-form.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { TaskFormComponent } from './observable/task-form/task-form.component';
     CountDownTimerComponent,
     OtpComponent,
     BordComponent,
-    TaskFormComponent
+    TaskFormComponent,
+    PartyFormComponent,
+    PartyFormTemplateDirective,
+    NatualPartyFormComponent,
+    LegalPartyFormComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +60,8 @@ import { TaskFormComponent } from './observable/task-form/task-form.component';
       { path: "voteTaker", component: VoteTakerComponent },
       { path: "onChanges", component: VersionParentComponent },
       { path: "localVariable", component: OtpComponent },
-      { path: "taskBoard", component: BordComponent}
+      { path: "taskBoard", component: BordComponent},
+      { path: "componentFactoryResolver", component: PartyFormComponent}
     ])
   ],
   providers: [],
